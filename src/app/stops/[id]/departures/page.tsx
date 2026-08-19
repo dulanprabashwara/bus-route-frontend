@@ -82,7 +82,7 @@ export default function StopDeparturesPage({ params }: { params: Promise<{ id: s
       {/* Departures Table / List */}
       {loading ? (
         <div style={{ textAlign: 'center', padding: '3rem', color: '#94a3b8' }}>
-          Fetching live scheduled departures...
+          Fetching scheduled departures...
         </div>
       ) : !data || data.departures.length === 0 ? (
         <div className="glass-panel" style={{ padding: '2.5rem', textAlign: 'center', color: '#64748b' }}>

@@ -53,7 +53,7 @@ export default function HomePage() {
           Plan Your Journey Across <span style={{ background: 'linear-gradient(135deg, #10b981, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Sri Lanka</span>
         </h2>
         <p style={{ color: '#94a3b8', fontSize: '1.05rem', maxWidth: '600px', margin: '0 auto' }}>
-          Exact timetable departures and verified NTC point-to-point fares for 29 pilot inter-provincial bus routes.
+          Official scheduled timetables and verified NTC fare data for 29 pilot inter-provincial bus routes.
         </p>
       </div>
 
@@ -160,9 +160,9 @@ export default function HomePage() {
 
           {response.journeys.length === 0 ? (
             <div className="glass-panel" style={{ padding: '2.5rem', textAlign: 'center', color: '#94a3b8' }}>
-              <p style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>No Direct or Connecting Journeys Found</p>
+              <p style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>No journey found in the current pilot timetable data.</p>
               <p style={{ fontSize: '0.9rem', color: '#64748b' }}>
-                Try selecting major bus hubs such as Colombo Fort, Kandy, Galle, Kurunegala, or Negombo.
+                This pilot currently contains a limited set of official timetable routes. Try selecting major bus hubs such as Colombo Fort, Kandy, Galle, Kurunegala, or Negombo.
               </p>
             </div>
           ) : (
