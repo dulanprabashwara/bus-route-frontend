@@ -34,6 +34,19 @@ export default function FareBadge({ fare, fareStatus, fareType, isTotal = false 
     );
   }
 
+  if (fareStatus === 'PARTIAL' && fare) {
+    return (
+      <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+        <div style={{ fontSize: isTotal ? '1.2rem' : '1rem', fontWeight: 800, color: '#38bdf8' }}>
+          Known fare: Rs. {fare.toFixed(2)}+
+        </div>
+        <span className="badge badge-endpoint" title="Some leg fares unavailable under official NTC policy" style={{ fontSize: '0.65rem', marginTop: '0.15rem', background: 'rgba(56, 189, 248, 0.15)', color: '#38bdf8', border: '1px solid rgba(56, 189, 248, 0.3)' }}>
+          ⚠ Some Leg Fares Unavailable
+        </span>
+      </div>
+    );
+  }
+
   return (
     <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-end' }}>
       <div style={{ fontSize: isTotal ? '1.1rem' : '0.9rem', fontWeight: 700, color: '#f43f5e' }}>

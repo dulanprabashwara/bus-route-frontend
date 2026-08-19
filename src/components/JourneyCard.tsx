@@ -71,7 +71,7 @@ export default function JourneyCard({ journey }: JourneyCardProps) {
 
         {/* Fare & Action */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-          <FareBadge fare={journey.totalFare} fareStatus={journey.fareStatus === 'COMPLETE' ? 'EXACT' : 'UNAVAILABLE'} isTotal={true} />
+          <FareBadge fare={journey.totalFare} fareStatus={journey.fareStatus as any} isTotal={true} />
           
           <button
             type="button"
